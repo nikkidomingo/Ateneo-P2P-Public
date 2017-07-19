@@ -1,0 +1,104 @@
+/* P2P Layout */
+
+body {
+    padding-top: 70px;
+    /*background-image: url(/images/back.png);*/
+    -webkit-transform: translate3d(0,0,0);
+    color: #262626;
+    will-change: top;/* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
+}
+
+.panel-main {
+  /*background-color: rgba(242, 242, 242, 0.9);*/
+  border-width: 2px;
+  border-color: #0B3C5D;
+  font-family: "lato-light";
+  margin: 10px;
+}
+
+.panel-head-one {
+  font-family: "gotham-rounded-medium";
+  text-transform: uppercase;
+  color: #D9B310;
+  font-weight: bold;
+  background-color: #0B3C5D;
+  padding: 5px;
+  text-align: center;
+}
+
+.panel-head-two {
+  font-family: "gotham-rounded-medium";
+  text-transform: uppercase;
+}
+
+.panel-head-three {
+  font-family: "lato-light";
+  font-size: 16px;
+  font-weight: bold;
+  color: #D9B310;
+}
+
+.panel-body-one {
+  font-family: "lato-light";
+  font-size: 16px;
+}
+
+.text-white {
+  color: #F2F2F2;
+}
+
+.nav-style {
+	font-family: "gotham-rounded-medium";
+}
+
+.li-style {
+	color: #F2F2F2;
+}
+
+@font-face {
+	font-family:"gotham-rounded-medium";
+	src: url('/fonts/gotham-rounded-medium.ttf');
+}
+
+@font-face {
+	font-family:"lato-light";
+	src: url('/fonts/lato-light.ttf');
+}
+
+#announcement-panel {
+  float: left;
+  width: 50%;
+}
+
+#schedule-panel {
+  float: left;
+  width: 50%;
+  text-align: center;
+}
+
+#full-size {
+  height:100%;
+  width:100%;
+}
+
+.btn-primary-blue {
+  background-color: #0B3C5D; 
+  border-width: 1px; 
+  border-color: #D9B310; 
+  min-width: 100px; 
+  color: #D9B310; 
+  font-family: 'gotham-rounded-medium';
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.btn-primary-yellow {
+  background-color: #D9B310; 
+  border-width: 1px; 
+  border-color: #D9B310; 
+  min-width: 100px; 
+  color: #0B3C5D;
+  font-family: 'gotham-rounded-medium'; 
+  text-transform: uppercase;
+  font-weight: bold;
+}

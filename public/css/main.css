@@ -1,0 +1,62 @@
+/* P2P Layout */
+
+body {
+    padding-top: 70px; 
+    background-color: #0B3C5D;
+    color: #F2F2F2; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
+}
+
+.panel-main {
+  background-color: transparent;
+  border: none;
+  font-family: "lato-light";
+}
+
+.text-white {
+  color: #F2F2F2;
+}
+
+.nav-style {
+	font-family: "gotham-rounded-medium";
+}
+
+.li-style {
+	color: #F2F2F2;
+}
+
+@font-face {
+	font-family:"gotham-rounded-medium";
+	src: url('/fonts/gotham-rounded-medium.ttf');
+}
+
+@font-face {
+	font-family:"lato-light";
+	src: url('/fonts/lato-light.ttf');
+}
+
+.btn-primary-blue {
+  background-color: #0B3C5D; 
+  border-width: 1px; 
+  border-color: #D9B310; 
+  min-width: 100px; 
+  color: #D9B310; 
+  font-family: 'gotham-rounded-medium';
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.btn-primary-yellow {
+  background-color: #D9B310; 
+  border-width: 1px; 
+  border-color: #D9B310; 
+  min-width: 100px; 
+  color: #0B3C5D; 
+  font-family: 'gotham-rounded-medium'; 
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.text-center {
+  margin-top: 50px; 
+  margin-bottom: 30px
+}
