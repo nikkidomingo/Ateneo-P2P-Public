@@ -56,7 +56,19 @@ body {
   font-weight: bold;
 }
 
+.btn-link {
+  color: #D9B310;
+}
+
 .text-center {
   margin-top: 50px; 
   margin-bottom: 30px
+}
+
+#validate .form-control{
+  max-width: 400px;
+}
+
+#validate .radio{
+  max-width: 300px;
 }

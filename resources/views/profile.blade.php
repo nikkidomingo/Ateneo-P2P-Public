@@ -12,6 +12,8 @@
             <h4> Loyola Schools Student </h4>
             @elseif ($user -> user_type == 2)
             <h4> Ateneo Employee </h4>
+            @elseif ($user -> user_type == 3)
+            <h4> Guest User </h4>
             @endif
         </div>
 

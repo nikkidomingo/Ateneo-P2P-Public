@@ -2,10 +2,14 @@
 
 body {
     padding-top: 70px;
-    /*background-image: url(/images/back.png);*/
     -webkit-transform: translate3d(0,0,0);
+    /*background-image: url(/images/back.png);*/
+    background-position: center center;
     color: #262626;
-    will-change: top;/* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
+    height: 100%;
+    width: 100%;
+    will-change: top;
+    /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
 }
 
 .panel-main {
@@ -101,4 +105,34 @@ body {
   font-family: 'gotham-rounded-medium'; 
   text-transform: uppercase;
   font-weight: bold;
+}
+
+.navbar-inverse{
+  background-color: #0B3C5D; 
+  border:none;
+}
+
+.navbar-fixed-top .nav {
+  padding: 15px 0;
+}
+
+.navbar-fixed-top .navbar-brand {
+  padding: 0 15px;
+}
+
+#printable{display:none;}
+
+@media print {
+ #printable {display:block;}
+ #reservations-content {display:none;}
+}
+
+@media(min-width:768px) {
+    body {
+        padding-top: 100px; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
+    }
+
+    .navbar-fixed-top .navbar-brand {
+        padding: 15px 0;
+    }
 }

@@ -12,9 +12,8 @@
 
     <!-- Styles -->
     <link href="/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/css/main-home.css" rel="stylesheet">
-    <link href="/css/logo-nav.css" rel="stylesheet">
     <link href="/css/app.css" rel="stylesheet">
+    <link href="/css/main-home.css" rel="stylesheet">
     <link href="/css/bootstrap-datepicker3.css" rel="stylesheet">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
 
@@ -27,9 +26,9 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" style="background-color: #0B3C5D; border:none">
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <div class="container">
-                <div class="navbar-header" style="height: 60px; "">
+                <div class="navbar-header" style="height: 60px; ">
 
                     <!-- Collapsed Hamburger -->
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
@@ -41,7 +40,7 @@
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        <img src="/images/navlogo.png" style="height: 60px; margin-right:40px; margin-top:-5px">
+                        <img src="/images/navlogo.png" style="height: 60px; margin-right:40px;">
                     </a>
                 </div>
 
@@ -55,12 +54,18 @@
                                 <li><a href="/admin/reservations"  style=" color: #F2F2F2" > RESERVATIONS </a></li>
                                 <li><a href="/admin/slots"  style=" color: #F2F2F2"> SCHEDULES </a></li>
                                 <!-- <li><a href="/admin/editcontacts" > Contact </a></li> -->
+                                @if (Auth::user()->user_type == 3)
+                                     <a href="/switch" class="btn btn-primary-yellow" style="margin-bottom:-25px;"><b>Switch to User</b></a>
+                                @endif
                             @else
 
                                 <li><a href="/home" style=" color: #F2F2F2"> HOME </a></li>
                                 <li><a href="/reserve" style=" color: #F2F2F2"> RESERVE </a></li>
                                 <li><a href="/profile" style=" color: #F2F2F2"> PROFILE </a></li>
                                 <li><a href="/contactus" style=" color: #F2F2F2"> CONTACT US </a></li>
+                                @if (Auth::user()->user_type == 3)
+                                    <a href="/switch" class="btn btn-primary-yellow" style="margin-bottom:-25px;"><b>Switch to Admin</b></a>
+                                @endif
                             @endif
                         @endif
                     </ul>
@@ -98,6 +103,8 @@
 
         @yield('content')
     </div>
+
+    <div class=></div>
 
     <!-- Scripts -->
     <script src="/js/app.js"></script>

@@ -2,7 +2,9 @@
 
 @section('content')
 <div class="fullsize">
-        <div class="col-md-6">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <div class="col-md-8">
             <div class="panel-main">
                     <div class="panel-head-one">
                             <h2>Announcements</h2>
@@ -57,10 +59,9 @@
                        <hr>
                     @endforeach
                 </div>
-
             </div>
 
-            <div class="col-md-6">
+            <div class="col-md-4">
             <div class="panel-main">
                 <div class="panel-head-one"><h2>Schedules</h2>
                     <form method="get" action="/admin/home/schedules/edit">
@@ -120,9 +121,10 @@
 
                     @endforeach
                     </div>
+                </div>
             </div>
-
         </div>
     </div>
+    <div class="col-md-2"></div>
 </div>
 @endsection

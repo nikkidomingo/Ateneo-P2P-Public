@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'first_name', 'last_name', 'middle_initial','mobile_number', 'user_type','password', 'email',
+        'first_name', 'last_name', 'middle_initial','mobile_number', 'user_type','password', 'email', 'is_admin'
     ];
 
     /**
@@ -25,7 +25,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token', 'is_admin'
+        'password', 'remember_token'
     ];
 
     public function reservations(){

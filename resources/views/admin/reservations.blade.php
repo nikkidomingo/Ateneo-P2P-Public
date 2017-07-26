@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="container" id="reservations-content">
   <div class="panel-main" style="margin:50px">
     <form class="form-horizontal" role="form" method="get" action="">
       {{ csrf_field() }}
@@ -13,13 +13,13 @@
         </div>
 
         <div class="col-md-4">
-          <button type="submit" class="btn btn-primary-yellow"> Export </button>
+          <button class="btn btn-primary-yellow" onclick="printTable()"> Export </button>
         </div>
       </div>
     </form>
   </div>
 
-  <table class="table">
+  <table class="table" id="reservations-table">
     <thead class= "panel-head-one">
       <tr>
         <!-- <th style="text-align: center;">Date</th> -->
@@ -34,6 +34,8 @@
     </tbody>
   </table>
 </div>
+
+<div id="printable"></div>
 
 <script
     src="https://code.jquery.com/jquery-3.1.1.min.js"
@@ -81,6 +83,15 @@
                 }
             }
         });
+    }
+
+    function printTable(){
+      var str = "<h1><strong>Ateneo P2P+ Trips</strong></h1><h4><strong>Date: " + $('#date').val() + "</strong></h4>"
+      $('#printable').empty();
+      $('#printable').append(str);
+      $('#printable').append( $('#reservations-table').clone());
+      $('#printable #reservations-table th:last-child, #printable #reservations-table td:last-child').remove();
+      window.print();
     }
 
     function goBack() {

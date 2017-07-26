@@ -1,6 +1,6 @@
-DROP DATABASE IF EXISTS p2p;
-CREATE DATABASE p2p;
-USE p2p;
+DROP DATABASE IF EXISTS p2p_public;
+CREATE DATABASE p2p_public;
+USE p2p_public;
 
 DROP TABLE IF EXISTS users;
 CREATE TABLE users(
@@ -188,7 +188,5 @@ VALUES
 	("LS/Employees/University Affiliates", '+63 928 8235 816'),
 	("LS/Employees/University Affiliates", '+63 928 8235 827');
 
--- UPDATE users
--- SET is_admin=1
--- WHERE id = 2;
-
+-- SOURCE C:/Users/Nikki Domingo/Documents/Projects/ateneo-p2p-public/p2p-v3.sql;
+-- UPDATE users SET is_admin=1 WHERE id=2;

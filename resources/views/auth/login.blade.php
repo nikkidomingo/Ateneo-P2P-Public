@@ -42,7 +42,7 @@
                     </label>
                 </div>
 
-                <a class="btn btn-link" href="{{ url('/password/reset') }}" style="color: #D9B310">
+                <a class="btn btn-link" href="{{ url('/password/reset') }}">
                     Forgot Your Password?
                 </a>
             </div>

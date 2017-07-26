@@ -33,7 +33,8 @@ Route::post('/reserve', 'ReservationsController@makeReservation');
 Auth::routes();
 Route::get('/register/faculty', function() { return view('auth.faculty'); });
 Route::get('/register/validate', 'Auth\RegisterController@chooseFaculty');
-Route::post('/register/{user_type}', 'Auth\RegisterController@validateUser');
+Route::get('/register/{user_type}', 'Auth\RegisterController@validateUser');
+Route::get('/switch', 'UsersController@switchAdmin');
 
 //Admin Routes
 Route::get('/admin/home', 'HomeController@index') -> middleware('admin');

@@ -2,7 +2,9 @@
 
 @section('content')
 <div class="fullsize">
-        <div class="col-md-6">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <div class="col-md-8">
             <div class="panel-main">
                 <div class="panel-head-one"><h2>Announcements</h2></div>
  
@@ -23,7 +25,7 @@
             </div>
         </div>
 
-        <div class="col-md-6">
+        <div class="col-md-4">
             <div class="panel-main">
                 <div class="panel-head-one"><h2>Schedules</h2></div>
 
@@ -78,7 +80,8 @@
                     </div>
                 </div>
             </div>
-
         </div>
+        <div class="col-md-2"></div>
+    </div>
 </div>
 @endsection

@@ -28,12 +28,14 @@
     <div id="app">
         <div class="container">
         <div class="row">
-            <div class="col-md-8 col-md-offset-2">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
                 <div class="panel panel-main" style="text-align: center; ">
                     <img src="/images/busgold.png" style="height:60px; margin-top: 50px;" >
                         @yield('content')
                 </div>
             </div>
+            <div class="col-md-2"></div>
         </div>
     </div>
     </div>

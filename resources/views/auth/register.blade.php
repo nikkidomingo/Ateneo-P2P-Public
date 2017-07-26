@@ -2,16 +2,16 @@
 
 @section('content')
 <p class="text-center"><strong>Complete</strong> your registration.</p>
-<div class="panel-body">
+<div class="panel-body" id="validate">
     <form class="form-horizontal" role="form" method="POST" action="{{ url('/register') }}">
         {{ csrf_field() }}
-
+        <center>
         <input type="hidden" name="user_type" value="{{$user_type}}">
 
         <div class="form-group{{ $errors->has('first_name') ? ' has-error' : '' }}">
-            <label for="first_name" class="col-md-4 control-label">First Name</label>
+            <label for="first_name" class="col-sm-4 control-label">First Name</label>
 
-            <div class="col-md-6">
+            <div class="col-sm-6">
                 <input id="first_name" type="text" class="form-control" name="first_name" value="{{ old('first_name') }}" required autofocus>
 
                 @if ($errors->has('first_name'))
@@ -23,9 +23,9 @@
         </div>
 
         <div class="form-group{{ $errors->has('last_name') ? ' has-error' : '' }}">
-            <label for="last_name" class="col-md-4 control-label">Last Name</label>
+            <label for="last_name" class="col-sm-4 control-label">Last Name</label>
 
-            <div class="col-md-6">
+            <div class="col-sm-6">
                 <input id="last_name" type="text" class="form-control" name="last_name" value="{{ old('last_name') }}" required autofocus>
 
                 @if ($errors->has('last_name'))
@@ -37,9 +37,9 @@
         </div>
 
         <div class="form-group{{ $errors->has('middle_initial') ? ' has-error' : '' }}">
-            <label for="middle_initial" class="col-md-4 control-label">Middle Initial</label>
+            <label for="middle_initial" class="col-sm-4 control-label">Middle Initial</label>
 
-            <div class="col-md-6">
+            <div class="col-sm-6">
                 <input id="middle_initial" type="text" class="form-control" name="middle_initial" value="{{ old('middle_initial') }}">
 
                 @if ($errors->has('middle_initial'))
@@ -51,9 +51,9 @@
         </div>
 
         <div class="form-group{{ $errors->has('mobile_number') ? ' has-error' : '' }}">
-            <label for="mobile_number" class="col-md-4 control-label">Mobile Number</label>
+            <label for="mobile_number" class="col-sm-4 control-label">Mobile Number</label>
 
-            <div class="col-md-6">
+            <div class="col-sm-6">
                 <input id="mobile_number" type="text" class="form-control" name="mobile_number" value="{{ old('mobile_number') }}" required autofocus>
 
                 @if ($errors->has('mobile_number'))
@@ -65,9 +65,9 @@
         </div>
 
         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-            <label for="email" class="col-md-4 control-label">E-Mail Address</label>
+            <label for="email" class="col-sm-4 control-label">E-Mail Address</label>
 
-            <div class="col-md-6">
+            <div class="col-sm-6">
                 <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required>
 
                 @if ($errors->has('email'))
@@ -79,9 +79,9 @@
         </div>
 
         <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-            <label for="password" class="col-md-4 control-label">Password</label>
+            <label for="password" class="col-sm-4 control-label">Password</label>
 
-            <div class="col-md-6">
+            <div class="col-sm-6">
                 <input id="password" type="password" class="form-control" name="password" required>
 
                 @if ($errors->has('password'))
@@ -93,9 +93,9 @@
         </div>
 
         <div class="form-group{{ $errors->has('password_confirmation') ? ' has-error' : '' }}">
-            <label for="password-confirm" class="col-md-4 control-label">Confirm Password</label>
+            <label for="password-confirm" class="col-sm-4 control-label">Confirm Password</label>
 
-            <div class="col-md-6">
+            <div class="col-sm-6">
                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
 
                 @if ($errors->has('password_confirmation'))
@@ -107,7 +107,7 @@
         </div>
 
         <div class="form-group" style="margin-top: 50px;">
-            <div class="col-md-6 col-md-offset-3">
+            <div class="col-sm-6 col-sm-offset-3">
             <button type="submit" class="btn btn-primary-yellow">
                     <strong> Register </strong>
                 </button>
@@ -117,6 +117,7 @@
                 </button>
             </div>
         </div>
+        </center>
     </form>
 </div>
 @endsection
