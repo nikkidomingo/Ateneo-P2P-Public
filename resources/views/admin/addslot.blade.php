@@ -3,22 +3,22 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-md-8 col-md-offset-2">
+        <div class="col-sm-8 col-sm-offset-2">
             <p class="text-center" style="margin-top: 40px; margin-bottom: 30px;"><strong>Add</strong> shuttle trip.</p>
             <div class="panel-main">
                 <form class="form-horizontal" role="form" method="get" action="/admin/slots/add">
                     {{ csrf_field() }}
 
                     <div class="form-group">
-                        <label for="date_slots" class="col-md-4 control-label">Date</label>
-                        <div class="col-md-6">
+                        <label for="date_slots" class="col-sm-4 control-label">Date</label>
+                        <div class="col-sm-6">
                             <input id="date_slots" class="form-control date hint" name="date_slots" value="" required autofocus>
                         </div>
                     </div>
 
                     <div class="form-group row">
-                        <label for="morning_schedule" class="col-md-4 control-label">Morning Schedules</label>
-                        <div class="col-md-6 radio">
+                        <label for="morning_schedule" class="col-sm-4 control-label">Morning Schedules</label>
+                        <div class="col-sm-6 radio">
                             @foreach ($schedules as $schedule)
                                 @if($schedule->location->trip_type == 0)
                                     <label><input type="checkbox" name="schedules[]" id="schedules" value="{{$schedule -> id}}"> {{$schedule -> location -> name}} || {{ Carbon\Carbon::parse( $schedule -> timeslot -> time_slot )->format('h:i A') }} </label><br>
@@ -28,8 +28,8 @@
                     </div>
 
                     <div class="form-group row">
-                        <label for="afternoon_schedule" class="col-md-4 control-label">Afternoon Schedules</label>
-                        <div class="col-md-6 radio">
+                        <label for="afternoon_schedule" class="col-sm-4 control-label">Afternoon Schedules</label>
+                        <div class="col-sm-6 radio">
                             @foreach ($schedules as $schedule)
                                 @if($schedule->location->trip_type == 1)
                                     <label><input type="checkbox" name="schedules[]" id="schedules" value="{{$schedule -> id}}"> {{$schedule -> location -> name}} || {{ Carbon\Carbon::parse( $schedule -> timeslot -> time_slot )->format('h:i A') }} </label><br>
@@ -39,16 +39,18 @@
                     </div>
 
                     <div class="form-group row">
-                        <label for="num_of_seats" class="col-md-4 control-label">Number of Seats</label>
-                        <div class="col-md-6 radio">
+                        <label for="num_of_seats" class="col-sm-4 control-label">Number of Seats</label>
+                        <div class="col-sm-6 radio">
                             <input class="form-control" type="number" name="num_of_seats" id="num_of_seats" required></input>
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <div class="col-md-6 col-md-offset-4">
+                        <div class="col-sm-6 col-sm-offset-4">
+                            <center>
                             <button onclick="goBack()" class="btn btn-primary-blue" > Cancel </button>
                             <button type="submit" class="btn btn-primary-yellow"> Submit </button>
+                            </center>
                         </div>
                     </div>
                 </form>

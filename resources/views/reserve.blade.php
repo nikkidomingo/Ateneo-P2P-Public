@@ -4,48 +4,44 @@
 
 <div class="container">
 	<div class="row">
-		<div class="col-md-8 col-md-offset-2">
+		<div class="col-sm-8 col-sm-offset-2">
 			<p class="text-center" style="margin-top: 40px; margin-bottom: 30px;"><strong>Reserve</strong> a shuttle slot.</p>
 			<div class="panel-main">
 				<form class="form-horizontal" role="form" method="POST" action="/reserve">
 					{{ csrf_field() }}
 					
 					<div class="form-group row">
-						<label for="date_slots" class="col-md-4 control-label">Date</label>
-						<div class="col-md-6">
+						<label for="date_slots" class="col-sm-4 control-label">Date</label>
+						<div class="col-sm-6">
 							<input id="date_slots" class="form-control date hint" name="date_slots" value="You can select multiple dates." required autofocus>
 						</div>
 					</div>
 
 					<div class="form-group row"> 
-						<label for="morning_schedule" class="col-md-4 control-label">Morning Schedules</label>
-						<div class="col-md-6 radio">
+						<label for="morning_schedule" class="col-sm-4 control-label">Morning Schedules</label>
+						<div class="col-sm-6 radio">
 							<select class="form-control" name="morning_schedule" id="morning_schedule">
 							</select>   
 						</div>
 					</div>
 
 					<div class="form-group row">
-						<label for="afternoon_schedule" class="col-md-4 control-label">Afternoon Schedules</label>
-						<div class="col-md-6 radio">
+						<label for="afternoon_schedule" class="col-sm-4 control-label">Afternoon Schedules</label>
+						<div class="col-sm-6 radio">
 							<select class="form-control" name="afternoon_schedule" id="afternoon_schedule">
 							</select>	
 						</div>
 					</div>
 
 					<div class="form-group row">
-						<label for="comment" class="col-md-4 control-label">Special Comments</label>
-						<div class="col-md-6 radio">
+						<label for="comment" class="col-sm-4 control-label">Special Comments</label>
+						<div class="col-sm-6 radio">
 							<textarea class="form-control" id="comment" name="comment" rows="3"></textarea>
 						</div>
 					</div>
 
 					<div class="form-group">
-						<div class="col-md-6 col-md-offset-5">
-							<button type="submit" class="btn btn-primary-blue">
-								Submit
-							</button>
-						</div>
+						<center><button type="submit" class="btn btn-primary-blue">Submit</button></center>
 					</div>
 				</form>
 			</div>

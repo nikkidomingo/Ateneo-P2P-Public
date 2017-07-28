@@ -2,18 +2,21 @@
 
 @section('content')
 <div class="container" id="reservations-content">
-  <div class="panel-main" style="margin:50px">
+
+  <div class="panel-main" id="reservations-input" style="margin:50px">
     <form class="form-horizontal" role="form" method="get" action="">
       {{ csrf_field() }}
 
       <div class="form-group">
-        <label for="date" class="col-md-4 control-label">Date</label>
-        <div class="col-md-4">
-          <input id="date" class="form-control date hint" name="date" onchange="loadDate()" value="" required autofocus>
-        </div>
+        <div class="row">
+          <label for="date" class="col-sm-4 control-label">Date</label>
+          <div class="col-sm-4">
+            <input id="date" class="form-control date hint" name="date" onchange="loadDate()" value="" required autofocus>
+          </div>
 
-        <div class="col-md-4">
-          <button class="btn btn-primary-yellow" onclick="printTable()"> Export </button>
+          <div class="col-sm-4 print-btn">
+            <button class="btn btn-primary-yellow" onclick="printTable()"> Print </button>
+          </div>
         </div>
       </div>
     </form>

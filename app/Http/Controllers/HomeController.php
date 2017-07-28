@@ -29,7 +29,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $announcements = Announcement::all();
+        // $announcements = Announcement::all();
+        $announcements = Announcement::all()->sortByDesc('updated_at');
         $locations = Location::all();
         $schedules = Schedule::all();
 
