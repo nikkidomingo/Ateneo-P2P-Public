@@ -8,7 +8,7 @@ class Schedule extends Model
 {   
 	public function timeslot(){
 
-		return $this->belongsTo(TimeSlot::class);
+		return $this->belongsTo(Timeslot::class);
 	}
 
 	public function location(){
