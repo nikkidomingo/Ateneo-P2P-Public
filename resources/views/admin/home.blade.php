@@ -4,6 +4,22 @@
 <div class="fullsize">
     <div class="col-md-2"></div>
     <div class="col-md-8">
+        <div class="row" style="margin-top: 20px;">
+            <div class="col-sm-8 col-md-offset-2">
+                @if (Auth::user()->user_type == 3)
+                    <div class="alert alert-info">
+                        <p>Welcome to the demo version of <strong>Ateneo P2P+</strong>! Ateneo P2P+ is the university's point to point shuttle service, where users can reserve slots to shuttle trips to and from Ateneo.</p>
+                        <p> As an <strong>Admin</strong>, you can:
+                            <ul>
+                                <li>Add/edit announcements on the <strong>Home</strong> tab</li>
+                                <li>View and print a list of all riders for the day's shuttle trips on the <strong>Reservations</strong> tab</li>
+                                <li>Add shuttle trips per day on the <strong>Schedules</strong> tab</li>
+                            </ul>
+                        </p>
+                    </div>
+                @endif
+            </div>
+        </div>
         <div class="col-md-8">
             <div class="panel-main">
                     <div class="panel-head-one">
@@ -64,11 +80,11 @@
             <div class="col-md-4">
             <div class="panel-main">
                 <div class="panel-head-one"><h2>Schedules</h2>
-                    <form method="get" action="/admin/home/schedules/edit">
+                    <!-- <form method="get" action="/admin/home/schedules/edit">
                             <div class="form-group">
                                 <button type="submit" class="btn btn-primary-yellow" >Edit Schedules</button>
                             </div>
-                    </form>
+                    </form> -->
                 </div>
                 
 
