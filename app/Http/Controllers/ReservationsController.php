@@ -108,7 +108,7 @@ class ReservationsController extends Controller
             }
         }   
 
-        return back();
+        return back()->with('success', 'Your reservation has been saved.');
     }
 
     public function listReservations(){

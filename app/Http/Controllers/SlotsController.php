@@ -49,6 +49,6 @@ class SlotsController extends Controller
     		}
     	}
 
-    	return back();
+    	return back()->with('success', 'The new shuttle trips has been saved.');
     }
 }

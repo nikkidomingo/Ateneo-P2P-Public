@@ -11,6 +11,7 @@
     <title>{{ config('app.name', 'Ateneo P2P+') }}</title>
 
     <!-- Styles -->
+    <link rel="icon" href="/images/busgold.png">
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/app.css" rel="stylesheet">
     <link href="/css/main-home.css" rel="stylesheet">

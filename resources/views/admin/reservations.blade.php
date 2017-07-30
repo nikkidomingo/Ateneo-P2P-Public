@@ -4,6 +4,13 @@
 <div class="container" id="reservations-content">
 
   <div class="panel-main" id="reservations-input" style="margin:50px">
+    <div class="row"> 
+      <div class="col-sm-8 col-sm-offset-2">
+        <div class="alert alert-danger">
+          No reservations for this date.
+        </div>
+      </div>
+    </div>
     <form class="form-horizontal" role="form" method="get" action="">
       {{ csrf_field() }}
 
@@ -15,7 +22,7 @@
           </div>
 
           <div class="col-sm-4 print-btn">
-            <button class="btn btn-primary-yellow" onclick="printTable()"> Print </button>
+            <button class="btn btn-primary-yellow" id="export-btn" onclick="printTable()"> Print </button>
           </div>
         </div>
       </div>
@@ -40,11 +47,7 @@
 
 <div id="printable"></div>
 
-<script
-    src="https://code.jquery.com/jquery-3.1.1.min.js"
-    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-    crossorigin="anonymous">
-</script>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 <script src="/js/bootstrap-datepicker.js"></script>
 <script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
 
@@ -84,7 +87,10 @@
 
                   $('#table-body').append("<tr>" + td_location + td_time + td_user + td_number + td_delete_button + "</tr>");
                 }
+
+                isTableEmpty();
             }
+
         });
     }
 
@@ -95,6 +101,22 @@
       $('#printable').append( $('#reservations-table').clone());
       $('#printable #reservations-table th:last-child, #printable #reservations-table td:last-child').remove();
       window.print();
+    }
+
+    function isTableEmpty(){
+      if($('#date').val() == ''){}
+
+      var rowCount = $('#table-body tr').length;
+      if(rowCount < 1 && $('#date').val() == ''){
+        $('#export-btn').attr('disabled','disabled');
+        $('.alert-danger').css("display", "none");
+      } else if (rowCount < 1 && $('#date').val() != '') {
+        $('#export-btn').attr('disabled','disabled');
+        $('.alert-danger').css("display", "block");
+      } else {
+          $('#export-btn').removeAttr('disabled');
+          $('.alert-danger').css("display", "none");
+      }
     }
 
     function goBack() {

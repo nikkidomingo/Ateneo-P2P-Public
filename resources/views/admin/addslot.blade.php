@@ -1,9 +1,14 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="container" style="margin-top:30px;">
     <div class="row">
         <div class="col-sm-8 col-sm-offset-2">
+            @if (session('success'))
+                <div class="alert alert-success">
+                    <center><strong>Success!</strong> {{ session('success') }}</center>
+                </div>
+            @endif
             <p class="text-center" style="margin-top: 40px; margin-bottom: 30px;"><strong>Add</strong> shuttle trip.</p>
             <div class="panel-main">
                 <form class="form-horizontal" role="form" method="get" action="/admin/slots/add">

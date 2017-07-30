@@ -1,10 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="fullsize">
+<div class="fullsize" style="margin-top:30px;">
     <div class="col-md-2"></div>
     <div class="col-md-8">
-        <div class="row" style="margin-top: 20px;">
+        <div class="row">
             <div class="col-sm-8 col-md-offset-2">
                 @if (Auth::user()->user_type == 3)
                     <div class="alert alert-info">

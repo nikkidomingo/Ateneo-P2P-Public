@@ -112,6 +112,14 @@ body {
   max-width: 300px;
 }
 
+.alert-danger{
+  display:none;
+}
+
+.main-containter{
+  margin-top:30px;
+}
+
 /*Print components*/
 #printable{display:none;}
 

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="container" style="margin-top:30px;">
     <div class="col-md-8 col-md-offset-2">
         <h1><strong> {{ $user -> first_name }} {{ $user->last_name }}</strong></h1>
 
